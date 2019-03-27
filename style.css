@@ -1,0 +1,89 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    width: 800px;
+    margin: auto;
+}
+
+.left {
+    float: left
+}
+
+.right {
+    float: right
+}
+
+.clear {
+    clear: both
+}
+.hidden {display: none !important}
+.all, .welcome{
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    display: block;
+    height: 380px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+.ecran{
+    width: 50%;
+}
+.result{
+    width: 50%;
+
+}
+#myVideo{
+    width: 90%;
+    height: 80%;
+    border: 3px dashed #b1b1b1;
+}
+#canvas{
+    width: 235px;
+    height: 220px;
+    border: 1px solid #b1b1b1;
+}
+.btn{
+    display: block;
+    border: none;
+    padding: 10px;
+    width: 235px;
+    background-color: #2196F3;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.welcome button{
+    padding: 50px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    width: 300px;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 100px;
+
+}
+.welcome button:hover{
+background-color: #ddd;
+}
+.countDown{
+    font-size: 15px;
+    text-align: center;
+}
+#countDown{
+    font-size: 30px;
+}
+#errors{
+padding: 10px;
+position: absolute;
+bottom: 0;
+color: red
+}

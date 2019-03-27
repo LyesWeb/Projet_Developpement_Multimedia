@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projet Développement Multimédia</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container welcome" id="welcome">
+        <button id="showModule" onclick="showModule()">tacke picture</button>
+    </div>
+    <div class="container all hidden" id="module">
+        <div class="row">
+            <div class="left ecran">
+                <video autoplay="true" loop id="myVideo" width="480" height="320"></video>
+                <div class="countDown">
+                    Be ready : <span id="countDown">3</span>
+                </div>
+            </div>
+            <div class="right result">
+                <canvas id="canvas" width="480" height="320"></canvas>
+                <button class="btn" id="capturer">Capture</button>
+            </div>
+        </div>
+        <div class="row clear">
+            <div id="errors"></div>
+        </div>
+    </div>
+    <footer class="container">
+        <p style="text-align: center; color: #333;">All right reserved, developped by <a href="https://github.com/ilyassking">Ilyas ARIBA</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
