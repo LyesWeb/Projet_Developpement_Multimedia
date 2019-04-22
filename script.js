@@ -1,4 +1,4 @@
-let myVideo, canvas, capturer, rescanvas, isCapture = false;
+let myVideo, canvas, capturer, rescanvas, originalPhoto, isCapture = false;
 
 function showModule(){
     document.getElementById("module").classList.remove("hidden");
@@ -62,10 +62,18 @@ function capture() {
             isCapture = true;
             console.log("Button is clicked");
             rescanvas.drawImage(myVideo, 0, 0, canvas.width, canvas.height);
+            originalPhoto = rescanvas.getImageData(0, 0, canvas.width, canvas.height)
             clearInterval(myVar);
             return;
         }
         countDown.innerText = i;
         i--;
     }, 1000);
+}
+
+function download(){
+    var download = document.getElementById("download");
+    var image = document.getElementById("canvas").toDataURL("image/png").replace("image/png", "image/octet-stream");
+    download.setAttribute("href", image);
+
 }
