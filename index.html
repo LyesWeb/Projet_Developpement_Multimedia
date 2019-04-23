@@ -23,6 +23,16 @@
                 <canvas id="canvas" width="480" height="320"></canvas>
                 <button class="btn" id="capturer">Capture</button>
                 <a id="download" download="image.png"><button class="btn" type="button" onClick="download()">Download</button></a>
+                <div class="controles">
+                    <div>
+                        <span>contraste</span>
+                        <input type="range" onchange="changeContrast(this.value)" min="-100" max="100" step="0.01">
+                    </div>
+                    <div>
+                        <span>luminosité</span>
+                        <input type="range" onchange="brightness(this.value)" value="1" min="0" max="5" step="0.01">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row clear">

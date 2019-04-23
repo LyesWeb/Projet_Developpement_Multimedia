@@ -76,3 +76,41 @@ function download(){
     var image = document.getElementById("canvas").toDataURL("image/png").replace("image/png", "image/octet-stream");
     download.setAttribute("href", image);
 }
+
+function changeContrast(contrastValue){
+    rescanvas.putImageData(contrastImage(originalPhoto, contrastValue), 0, 0);
+}
+function contrastImage(imgData, contrast){
+    var d = imgData.data;
+    contrast = (contrast/100) + 1;
+    var intercept = 128 * (1 - contrast);
+    for(var i=0;i<d.length;i+=4){
+        d[i] = d[i]*contrast + intercept;
+        d[i+1] = d[i+1]*contrast + intercept;
+        d[i+2] = d[i+2]*contrast + intercept;
+    }
+    
+    return imgData;
+}
+
+function brightness(x) {
+    var iD = rescanvas.getImageData(0, 0, canvas.width, canvas.height);
+    var dA = iD.data;
+
+    var brightnessMul = x; 
+
+    for (var i = 0; i < dA.length; i += 4) {
+        var red = dA[i];
+        var green = dA[i + 1];
+        var blue = dA[i + 2];
+
+        brightenedRed = brightnessMul * red;
+        brightenedGreen = brightnessMul * green;
+        brightenedBlue = brightnessMul * blue;
+
+        dA[i] = brightenedRed;
+        dA[i + 1] = brightenedGreen;
+        dA[i + 2] = brightenedBlue;
+    }
+    rescanvas.putImageData(iD, 0, 0);
+}
