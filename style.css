@@ -29,7 +29,7 @@ a{
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
-    position: relative;
+    /* position: relative; */
 }
 .ecran{
     width: 50%;
@@ -44,9 +44,12 @@ a{
     border: 3px dashed #b1b1b1;
 }
 #canvas{
-    width: 235px;
-    height: 220px;
+    /* width: 235px;
+    height: 220px; */
     border: 1px solid #b1b1b1;
+    margin: 0;
+    padding: 0;
+    display: block;
 }
 .btn{
     display: block;
@@ -88,4 +91,15 @@ padding: 10px;
 position: absolute;
 bottom: 0;
 color: red
+}
+
+/*
+*   Crop
+*/
+
+.imgContainer{
+    display: table;
+    /* position: relative; */
+    width: 235px;
+    height: 220px;
 }

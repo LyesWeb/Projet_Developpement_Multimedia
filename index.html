@@ -20,8 +20,13 @@
                 </div>
             </div>
             <div class="right result">
-                <canvas id="canvas" width="480" height="320"></canvas>
+                <div class="imgContainer">
+                    <canvas id="canvas" width="235" height="220"></canvas>
+                </div>
                 <button class="btn" id="capturer">Capture</button>
+                <button class="btn" id="resize">recadrer</button>
+                <button class="btn hidden" id="cancelResize">cancel</button>
+                <button class="btn hidden" id="crop">crop</button>
                 <a id="download" download="image.png"><button class="btn" type="button" onClick="download()">Download</button></a>
                 <div class="controles">
                     <div>
@@ -40,7 +45,7 @@
         </div>
     </div>
     <footer class="container">
-        <p style="text-align: center; color: #333;">All right reserved, developped by <a href="https://github.com/ilyassking">Ilyas ARIBA</a></p>
+        <p style="text-align: center; color: #333;">All rights reserved, developped by <a href="https://github.com/ilyassking">Ilyas ARIBA</a></p>
     </footer>
     <script src="script.js"></script>
 </body>
