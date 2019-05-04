@@ -24,7 +24,6 @@ a{
     margin-top: 20px;
     background-color: #f9f9f9;
     display: block;
-    height: 380px;
     overflow: hidden;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -102,4 +101,13 @@ color: red
     /* position: relative; */
     width: 235px;
     height: 220px;
+}
+
+.controles div{
+    clear: both;
+}
+.controles span{
+    float: left;
+    width: 100px;
+    display: block;
 }

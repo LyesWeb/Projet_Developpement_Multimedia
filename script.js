@@ -95,43 +95,25 @@ function download() {
 }
 
 function changeContrast(contrastValue) {
-    rescanvas.putImageData(contrastImage(originalPhoto, contrastValue), 0, 0);
+    rescanvas.filter = "contrast("+contrastValue+"%)";
+    rescanvas.drawImage(image, 0, 0, canvas.clientWidth, canvas.clientHeight);
 }
 
-function contrastImage(imgData, contrast) {
-    var d = imgData.data;
-    contrast = (contrast / 100) + 1;
-    var intercept = 128 * (1 - contrast);
-    for (var i = 0; i < d.length; i += 4) {
-        d[i] = d[i] * contrast + intercept;
-        d[i + 1] = d[i + 1] * contrast + intercept;
-        d[i + 2] = d[i + 2] * contrast + intercept;
-    }
-
-    return imgData;
+function changeBrightness(brightnessValue) {
+    rescanvas.filter = "contrast("+brightnessValue+"%)";
+    rescanvas.drawImage(image, 0, 0, canvas.clientWidth, canvas.clientHeight);
 }
 
-function brightness(x) {
-    var iD = rescanvas.getImageData(0, 0, canvas.width, canvas.height);
-    var dA = iD.data;
-
-    var brightnessMul = x;
-
-    for (var i = 0; i < dA.length; i += 4) {
-        var red = dA[i];
-        var green = dA[i + 1];
-        var blue = dA[i + 2];
-
-        brightenedRed = brightnessMul * red;
-        brightenedGreen = brightnessMul * green;
-        brightenedBlue = brightnessMul * blue;
-
-        dA[i] = brightenedRed;
-        dA[i + 1] = brightenedGreen;
-        dA[i + 2] = brightenedBlue;
-    }
-    rescanvas.putImageData(iD, 0, 0);
+function changeSaturate(saturateValue) {
+    rescanvas.filter = "saturate("+saturateValue+"%)";
+    rescanvas.drawImage(image, 0, 0, canvas.clientWidth, canvas.clientHeight);
 }
+
+function changeGrayscale(grayscaleValue) {
+    rescanvas.filter = "grayscale("+grayscaleValue+"%)";
+    rescanvas.drawImage(image, 0, 0, canvas.clientWidth, canvas.clientHeight);
+}
+
 //////////
 let resizeBtn = getElem("#resize");
 let cancelResizeBtn = getElem("#cancelResize");
