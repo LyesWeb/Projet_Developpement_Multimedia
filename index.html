@@ -16,34 +16,36 @@
             <div class="left ecran">
                 <video autoplay="true" loop id="myVideo" width="480" height="320"></video>
                 <div class="countDown">
-                    Be ready : <span id="countDown">3</span>
+                    <span>Be ready : </span><span id="countDown">3</span>
                 </div>
             </div>
-            <div class="right result">
+            <div class="left result">
                 <div class="imgContainer">
-                    <canvas id="canvas" width="235" height="220"></canvas>
+                    <canvas id="canvas" width="300" height="300"></canvas>
                 </div>
-                <button class="btn" id="capturer">Capture</button>
-                <button class="btn" id="resize">recadrer</button>
-                <button class="btn hidden" id="cancelResize">cancel</button>
-                <button class="btn hidden" id="crop">crop</button>
-                <a id="download" download="image.png"><button class="btn" type="button" onClick="download()">Download</button></a>
-                <div class="controles">
+                <div id="btns">
+                    <button class="btn" id="capturer">Capture</button>
+                    <button class="btn hidden" id="resize">recadrer</button>
+                    <button class="btn hidden" id="crop">crop</button>
+                    <button class="btn hidden" id="cancelResize">cancel</button>
+                    <a class="hidden" id="download" download="image.png"><button class="btn" type="button" onClick="download()">Download</button></a>
+                </div>
+                <div class="controles hidden">
                     <div>
-                        <span>contraste</span>
-                        <input type="range" onchange="changeContrast(this.value)" min="0" max="200" step="1" value="100">
+                        <span>- contraste</span>
+                        <input class="slider" type="range" onchange="changeContrast(this.value)" min="0" max="200" step="1" value="100">
                     </div>
                     <div>
-                        <span>Brightness</span>
-                        <input type="range" onchange="changeBrightness(this.value)" min="0" max="200" step="1" value="100">
+                        <span>- Brightness</span>
+                        <input class="slider" type="range" onchange="changeBrightness(this.value)" min="0" max="200" step="1" value="100">
                     </div>
                     <div>
-                        <span>Saturate</span>
-                        <input type="range" onchange="changeSaturate(this.value)" min="0" max="200" step="1" value="100">
+                        <span>- Saturate</span>
+                        <input class="slider" type="range" onchange="changeSaturate(this.value)" min="0" max="200" step="1" value="100">
                     </div>
                     <div>
-                        <span>Grayscale</span>
-                        <input type="range" onchange="changeGrayscale(this.value)" min="0" max="100" step="1" value="0">
+                        <span>- Grayscale</span>
+                        <input class="slider" type="range" onchange="changeGrayscale(this.value)" min="0" max="100" step="1" value="0">
                     </div>
                 </div>
             </div>
@@ -53,7 +55,7 @@
         </div>
     </div>
     <footer class="container">
-        <p style="text-align: center; color: #333;">All rights reserved, developped by <a href="https://github.com/ilyassking">Ilyas ARIBA</a></p>
+        <p style="font-size:14px;text-align: center; color: #666;">All rights reserved, developped by <a href="https://github.com/ilyassking">Ilyas ARIBA</a></p>
     </footer>
     <script src="script.js"></script>
 </body>

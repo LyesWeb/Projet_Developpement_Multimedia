@@ -81,6 +81,9 @@ function capture() {
             image = new Image();
             image.src = canvas.toDataURL();
             clearInterval(myVar);
+            getElem("#resize").classList.remove("hidden");
+            getElem("#download").classList.remove("hidden");
+            getElem(".controles").classList.remove("hidden");
             return;
         }
         countDown.innerText = i;
@@ -156,10 +159,10 @@ cropBtn.addEventListener("click", function () {
     cropBtn.style.display = "none";
     cropBtn.classList.add("hidden");
     rescanvas.clearRect(0, 0, canvas.width, canvas.height);
-    rescanvas.drawImage(image, cropX, cropY, cropWidth, cropHeight, 0, 0, 235, 220);
+    rescanvas.drawImage(image, cropX, cropY, cropWidth, cropHeight, 0, 0, canvas.width, canvas.height);
     image = new Image();
-    image.width = 235;
-    image.height = 220;
+    image.width = canvas.width;
+    image.height = canvas.height;
     image.src = canvas.toDataURL();
     cropX = cropY = 0;
     cropWidth = canvas.width;
