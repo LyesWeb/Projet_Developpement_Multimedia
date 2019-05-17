@@ -137,7 +137,7 @@ function success(stream) {
 
 function capture() {
     countDown = document.getElementById("countDown");
-    let i = 0;
+    let i = 3;
     var myVar = setInterval(function () {
         if (i < 0) {
             isCapture = true;
@@ -154,7 +154,7 @@ function capture() {
         }
         countDown.innerText = i;
         i--;
-    }, 0);
+    }, 1000);
 }
 
 function download() {
