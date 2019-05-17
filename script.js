@@ -6,8 +6,69 @@ var getElem = function (selector) {
 var getElems = function (selector) {
     return document.querySelectorAll(selector);
 };
-
+function htmlToNode(htmlString) {
+    var div = document.createElement('div');
+    div.innerHTML = htmlString.trim();
+    return div.firstChild; 
+}
+function replaceNode(newNodeHTML, oldNode){
+    var parent = oldNode.parentNode;
+    parent.replaceChild(htmlToNode(newNodeHTML), oldNode);
+}
 // End Helpers
+
+// Init
+let oldVideo = getElem('#myVideo');
+let newVideo = `<div class="left ecran">
+                    ${oldVideo.outerHTML}
+                    <div class="countDown">
+                        <span>Be ready : </span><span id="countDown">3</span>
+                    </div>
+                </div>`;
+                /////
+oldVideo.parentNode.insertAdjacentHTML("afterend",
+`<div class="row clear">
+    <div id="errors"></div>
+</div>`
+);
+replaceNode(newVideo, oldVideo);
+/////
+let oldCanvas = getElem('#canvas');
+let newCanvas = `
+<div class="left result">
+    <div class="imgContainer">
+        ${oldCanvas.outerHTML}
+    </div>
+    <div id="btns">
+        <button class="btn" id="capturer">Capture</button>
+        <button class="btn hidden" id="resize">recadrer</button>
+        <button class="btn hidden" id="crop">crop</button>
+        <button class="btn hidden" id="cancelResize">cancel</button>
+        <a class="hidden" id="download" download="image.png"><button class="btn" type="button" onClick="download()">Download</button></a>
+    </div>
+    <div class="controles hidden">
+        <div>
+            <span>- contraste</span>
+            <input class="slider" type="range" onchange="changeContrast(this.value)" min="0" max="200" step="1" value="100">
+        </div>
+        <div>
+            <span>- Brightness</span>
+            <input class="slider" type="range" onchange="changeBrightness(this.value)" min="0" max="200" step="1" value="100">
+        </div>
+        <div>
+            <span>- Saturate</span>
+            <input class="slider" type="range" onchange="changeSaturate(this.value)" min="0" max="200" step="1" value="100">
+        </div>
+        <div>
+            <span>- Grayscale</span>
+            <input class="slider" type="range" onchange="changeGrayscale(this.value)" min="0" max="100" step="1" value="0">
+        </div>
+    </div>
+</div>`;
+replaceNode(newCanvas, oldCanvas);
+/////
+
+// End Init
 
 let myVideo, canvas, capturer, rescanvas, originalPhoto, image, isEditable = false,
     isCapture = false,
@@ -19,12 +80,17 @@ cropWidth = canvas.width;
 cropHeight = canvas.height;
 rescanvas = canvas.getContext("2d");
 
-function showModule() {
+function showModule(startButton) {
     document.getElementById("module").classList.remove("hidden");
-    document.getElementById("welcome").classList.add("hidden");
+    if(startButton)
+        document.getElementById("welcome").classList.add("hidden");
     display_video();
 }
-
+function cropInit(startButton){
+    if(!startButton){
+        showModule(false);
+    }
+}
 function display_video() {
 
     myVideo = document.getElementById("myVideo");
@@ -333,6 +399,3 @@ function draw() {
         rescanvas.globalCompositeOperation = 'source-over';
     }
 }
-
-init();
-draw();
