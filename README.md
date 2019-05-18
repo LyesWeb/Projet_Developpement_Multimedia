@@ -79,6 +79,20 @@ the user can crop and resize the picture :
 ### Diagram
 ![v1](https://user-images.githubusercontent.com/19781935/57969316-5f5b7d80-7965-11e9-937c-7fff65637766.PNG)
 
+### Functions
+this function show the video camera if it's enabled on browser else it's display the default video
+![b1](https://user-images.githubusercontent.com/19781935/57969622-9e3f0280-7968-11e9-93c6-226bce51d19c.PNG)
+
+picture taking from camera
+![b2](https://user-images.githubusercontent.com/19781935/57969623-9e3f0280-7968-11e9-907f-eae467eed245.PNG)
+
+filters functions
+![b3](https://user-images.githubusercontent.com/19781935/57969624-9e3f0280-7968-11e9-92d4-6cc1fa7b34d4.PNG)
+
+download picture function
+![b4](https://user-images.githubusercontent.com/19781935/57969625-9e3f0280-7968-11e9-92e6-1e8d8a6fb65e.PNG)
+
+
 ### Todos
 
  - User can rotate the picture
