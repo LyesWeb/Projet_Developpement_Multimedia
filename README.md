@@ -76,6 +76,9 @@ the user can crop and resize the picture :
 
 <img src="https://user-images.githubusercontent.com/19781935/57962689-b3d10f80-7909-11e9-9652-23c10063deb3.PNG">
 
+### Diagram
+![v1](https://user-images.githubusercontent.com/19781935/57969316-5f5b7d80-7965-11e9-937c-7fff65637766.PNG)
+
 ### Todos
 
  - User can rotate the picture
