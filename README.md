@@ -22,7 +22,8 @@ $ npm i @ilyas.ariba/takepicjs
 
 You can also use CDN :
 ```text
-
+https://takepicjs.netlify.com/style.css
+https://takepicjs.netlify.com/script.js
 ```
 ```html
 <html>
