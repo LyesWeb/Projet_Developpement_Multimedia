@@ -59,17 +59,21 @@ You can also use CDN :
 
 You can test the module online : [TakePicJs](https://takepicjs.netlify.com)
 
-**The user can add button to start the module :**
-<img src="https://user-images.githubusercontent.com/19781935/57962574-0dd0d580-7908-11e9-846a-c2f5d77dce47.PNG" width="200">
+The user can add button to start the module :
 
-**if the device dosn't support camera a default video display :**
-<img src="https://user-images.githubusercontent.com/19781935/57962624-a9fadc80-7908-11e9-9c5d-7ab8151523c7.PNG" width="200">
+<img src="https://user-images.githubusercontent.com/19781935/57962574-0dd0d580-7908-11e9-846a-c2f5d77dce47.PNG">
 
-**the user can take picture ,add filters and download it :**
-<img src="https://user-images.githubusercontent.com/19781935/57962655-3a392180-7909-11e9-9c89-364f3f9becea.PNG" width="200">
+if the device dosn't support camera a default video display :
 
-**the user can crop and resize the picture :**
-<img src="https://user-images.githubusercontent.com/19781935/57962689-b3d10f80-7909-11e9-9652-23c10063deb3.PNG" width="200">
+<img src="https://user-images.githubusercontent.com/19781935/57962624-a9fadc80-7908-11e9-9c5d-7ab8151523c7.PNG">
+
+the user can take picture ,add filters and download it :
+
+<img src="https://user-images.githubusercontent.com/19781935/57962655-3a392180-7909-11e9-9c89-364f3f9becea.PNG">
+
+the user can crop and resize the picture :
+
+<img src="https://user-images.githubusercontent.com/19781935/57962689-b3d10f80-7909-11e9-9652-23c10063deb3.PNG">
 
 ### Todos
 
