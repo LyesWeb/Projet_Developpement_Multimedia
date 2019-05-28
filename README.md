@@ -60,39 +60,6 @@ https://takepicjs.netlify.com/script.js
 
 You can test the module online : [TakePicJs](https://takepicjs.netlify.com)
 
-The user can add button to start the module :
-
-<img src="https://user-images.githubusercontent.com/19781935/57962574-0dd0d580-7908-11e9-846a-c2f5d77dce47.PNG">
-
-if the device dosn't support camera a default video display :
-
-<img src="https://user-images.githubusercontent.com/19781935/57962624-a9fadc80-7908-11e9-9c5d-7ab8151523c7.PNG">
-
-the user can take picture ,add filters and download it :
-
-<img src="https://user-images.githubusercontent.com/19781935/57962655-3a392180-7909-11e9-9c89-364f3f9becea.PNG">
-
-the user can crop and resize the picture :
-
-<img src="https://user-images.githubusercontent.com/19781935/57962689-b3d10f80-7909-11e9-9652-23c10063deb3.PNG">
-
-### Diagram
-![v1](https://user-images.githubusercontent.com/19781935/57969316-5f5b7d80-7965-11e9-937c-7fff65637766.PNG)
-
-### Functions
-this function show the video camera if it's enabled on browser else it's display the default video
-![b1](https://user-images.githubusercontent.com/19781935/57969622-9e3f0280-7968-11e9-93c6-226bce51d19c.PNG)
-
-picture taking from camera
-![b2](https://user-images.githubusercontent.com/19781935/57969623-9e3f0280-7968-11e9-907f-eae467eed245.PNG)
-
-filters functions
-![b3](https://user-images.githubusercontent.com/19781935/57969624-9e3f0280-7968-11e9-92d4-6cc1fa7b34d4.PNG)
-
-download picture function
-![b4](https://user-images.githubusercontent.com/19781935/57969625-9e3f0280-7968-11e9-92e6-1e8d8a6fb65e.PNG)
-
-
 ### Todos
 
  - User can rotate the picture
